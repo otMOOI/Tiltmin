@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83a-Ub-Knq">
+                                <rect key="frame" x="16" y="275" width="568" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZb-Ic-flr">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLH-gC-PdJ">
+                                        <rect key="frame" x="0.0" y="29" width="568" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="83a-Ub-Knq" secondAttribute="centerY" id="d6v-oa-c4d"/>
+                            <constraint firstItem="83a-Ub-Knq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="s2o-Xe-E0F"/>
+                            <constraint firstItem="83a-Ub-Knq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yVp-Ev-BUf"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wbQ-E5-KVO" appends="YES" id="Vjt-NG-tp7"/>
+                            <outletCollection property="gestureRecognizers" destination="vJ7-2m-uN6" appends="YES" id="u89-jE-ReK"/>
+                            <outletCollection property="gestureRecognizers" destination="Smm-uf-hzQ" appends="YES" id="dhg-j8-b0U"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="centerNoteNum" destination="YZb-Ic-flr" id="rb8-md-3cu"/>
+                        <outlet property="pitchBendSensitivity" destination="XLH-gC-PdJ" id="ooZ-5H-RN1"/>
+                        <outlet property="settingView" destination="83a-Ub-Knq" id="J89-xw-2Tq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="2.7755575615628914e-17" id="vJ7-2m-uN6" userLabel="LongPressGestureRecognizer">
+                    <connections>
+                        <action selector="longPressView:" destination="BYZ-38-t0r" id="uBb-5F-MNB"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="2" id="Smm-uf-hzQ" userLabel="PanGestureRecognizer">
+                    <connections>
+                        <action selector="panView:" destination="BYZ-38-t0r" id="APV-2U-kLh"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="wbQ-E5-KVO" userLabel="PinchGestureRecognizer">
+                    <connections>
+                        <action selector="pinchView:" destination="BYZ-38-t0r" id="bP8-o8-o0L"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
